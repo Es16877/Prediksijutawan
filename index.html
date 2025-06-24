@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediksi Togel</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <meta name="theme-color" content="#8e44ad">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Montserrat:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="prediction-container">
+      <div class="logo-container">
+        <img src="https://cdn.areabermain.club/assets/cdn/az4/2025/04/23/20250423/a82bdc6fb564d0dff3671aeb9a4d1da5/logo.png" 
+             alt="Prediksi Togel Logo" 
+             class="logo floating">
+      </div>
+
+      <h1 class="glow">Prediksi Togel</h1>
+
+      <div class="form-group">
+        <label for="prediction-type">JENIS PREDIKSI:</label>
+        <select id="prediction-type">
+          <option value="single">Single Pasaran</option>
+          <option value="all">All Pasaran</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="pasaran-group">
+        <label for="pasaran">PILIH PASARAN:</label>
+        <select id="pasaran" required>
+          <option value="" disabled selected>-- Pilih Pasaran --</option>
+          <!-- Options akan diisi oleh JavaScript -->
+        </select>
+      </div>
+
+      <button id="generate-button" class="pulse">
+        <i class="fas fa-spinner fa-spin" style="display: none; margin-right: 8px;"></i>
+        <span id="generate-text">GENERATE PREDIKSI</span>
+        <i class="fas fa-magic" style="margin-left: 8px;"></i>
+      </button>
+
+      <div id="error-message" class="form-group" style="display: none;"></div>
+      
+      <div id="prediction-output" style="display: none;"></div>
+      
+      <button id="copy-button" style="display: none;">
+        <i class="fas fa-copy" style="margin-right: 8px;"></i>
+        <span>SALIN HASIL</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+  <!-- Fallback untuk browser lama -->
+  <script>
+    if (typeof Promise === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>');
+    }
+    if (typeof fetch === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js"><\/script>');
+    }
+  </script>
+</body>
+</html>
